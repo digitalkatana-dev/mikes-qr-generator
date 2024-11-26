@@ -81,7 +81,7 @@ function App() {
 						<form onSubmit={handleSubmit}>
 							<FormControl>
 								<TextField
-									label='Enter URL'
+									label='QR Destination'
 									value={destination}
 									onChange={(e) => handleChange('url', e.target.value)}
 								/>
