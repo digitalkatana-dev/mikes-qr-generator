@@ -13,8 +13,8 @@ function App() {
 	const [showQR, setShowQR] = useState(false);
 	const [destination, setDestination] = useState('');
 	const [size, setSize] = useState(128);
-	const [bgColor, setBgColor] = useState('#fff');
-	const [fgColor, setFgColor] = useState('#000');
+	const [bgColor, setBgColor] = useState('white');
+	const [fgColor, setFgColor] = useState('black');
 	const [imageSource, setImageSource] = useState('');
 	const [imageHeight, setImageHeight] = useState(24);
 	const [imageWidth, setImageWidth] = useState(24);
@@ -62,8 +62,8 @@ function App() {
 		setShowQR(false);
 		setDestination('');
 		setSize(128);
-		setBgColor('#fff');
-		setFgColor('#000');
+		setBgColor('white');
+		setFgColor('black');
 		setImageSource('');
 		setImageHeight(24);
 		setImageWidth(24);
