@@ -8,8 +8,29 @@
 	text-align: center;
 }
 
+#main-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.title {
+	font-family: 'Protest Revolution', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	background: linear-gradient(to bottom, #f12711, #f5af19);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+.qr-surface,
 .surface {
 	padding: 20px;
+}
+
+.qr-surface {
+	width: fit-content;
+	align-self: center;
 	margin-bottom: 35px;
 }
 

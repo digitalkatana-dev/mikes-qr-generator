@@ -73,15 +73,19 @@ function App() {
 
 	return (
 		<div className='App'>
-			<Container maxWidth='xs'>
-				<Paper className='surface' elevation={5}>
-					{showQR ? (
+			<Container id='main-container' maxWidth='xs'>
+				<h1 className='title'>Mike's QR Generator</h1>
+				{showQR ? (
+					<Paper className='qr-surface' elevation={5}>
 						<Generator data={qrCodeData} />
-					) : (
+					</Paper>
+				) : (
+					<Paper className='surface' elevation={5}>
 						<form onSubmit={handleSubmit}>
 							<FormControl>
 								<TextField
 									label='QR Destination'
+									placeholder='Enter URL'
 									value={destination}
 									onChange={(e) => handleChange('url', e.target.value)}
 								/>
@@ -111,6 +115,7 @@ function App() {
 							<FormControl>
 								<TextField
 									label='Image Source'
+									placeholder='Enter URL'
 									value={imageSource}
 									onChange={(e) => handleChange('img', e.target.value)}
 								/>
@@ -147,8 +152,8 @@ function App() {
 								Submit
 							</Button>
 						</form>
-					)}
-				</Paper>
+					</Paper>
+				)}
 				{showQR && (
 					<Button variant='outlined' fullWidth onClick={handleClear}>
 						Clear
